@@ -4,6 +4,6 @@ import loanContracts from './loanContracts.routes';
 
 const routes = Router();
 
-routes.use('/contract', loanContracts);
+routes.use('/loans', loanContracts);
 
 export default routes;

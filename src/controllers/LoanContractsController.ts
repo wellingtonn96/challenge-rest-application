@@ -1,7 +1,12 @@
-import { Request, Response } from 'express';
+import { Request, Response, NextFunction } from 'express';
+import { CreateLoanContractsService } from '../services/CreateLoanContractsService';
 
 class LoanContractsController {
-  public async create(request: Request, response: Response): Promise<any> {
+  public async create(
+    request: Request,
+    response: Response,
+    nextFunction: NextFunction,
+  ): Promise<any> {
     const {
       name,
       email,
@@ -13,7 +18,9 @@ class LoanContractsController {
       address,
     } = request.body;
 
-    const data = {
+    const createLoanControcts = new CreateLoanContractsService();
+
+    await createLoanControcts.execute({
       name,
       email,
       cpf,
@@ -22,9 +29,9 @@ class LoanContractsController {
       date_birth,
       marital_status,
       address,
-    };
+    });
 
-    return response.json(data);
+    return nextFunction();
   }
 }
 
