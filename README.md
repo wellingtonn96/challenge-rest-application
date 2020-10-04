@@ -1,5 +1,5 @@
 <h1 align="center">
-Users api Nodejs
+Challenge REST Application
 </h1>
 
 This app using all the latest features, tools and practices in web development!

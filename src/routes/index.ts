@@ -1,9 +1,9 @@
 import { Router } from 'express';
 
-import usersRouter from './users.routes';
+import loanContracts from './loanContracts.routes';
 
 const routes = Router();
 
-routes.use('/contract', usersRouter);
+routes.use('/contract', loanContracts);
 
 export default routes;
