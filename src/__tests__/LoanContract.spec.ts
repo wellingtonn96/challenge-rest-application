@@ -18,7 +18,7 @@ describe('LoanContracts', () => {
     await mainConnection.close();
   });
 
-  it('should be able to list create loan contracts in the session create', async () =>
+  it('should be able to create loan contracts in the session create', async () =>
     null);
 
   it('should be able to upload images in the session upload images ', async () =>

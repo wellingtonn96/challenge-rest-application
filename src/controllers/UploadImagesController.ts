@@ -2,7 +2,8 @@ import { Request, Response } from 'express';
 
 class UploadImagesController {
   public async create(request: Request, response: Response): Promise<any> {
-    return response.json({ message: 'Hello Upload' });
+    console.log(request.files);
+    return response.json().send();
   }
 }
 
