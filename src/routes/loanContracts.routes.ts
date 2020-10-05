@@ -13,20 +13,6 @@ const uploadImagesController = new UploadImagesController();
 
 usersRouter.post('/', loanContractsController.create);
 
-usersRouter.post(
-  '/upload',
-  upload.fields([
-    {
-      name: 'cnh_cpf',
-    },
-    {
-      name: 'Income_proof',
-    },
-    {
-      name: 'property_images',
-    },
-  ]),
-  uploadImagesController.create,
-);
+usersRouter.post('/upload', upload.any(), uploadImagesController.create);
 
 export default usersRouter;

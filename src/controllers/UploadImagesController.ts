@@ -1,9 +1,15 @@
 import { Request, Response } from 'express';
+import { UploadImagesService } from '../services/UploadImagesService';
 
 class UploadImagesController {
   public async create(request: Request, response: Response): Promise<any> {
-    console.log(request.files);
-    return response.json().send();
+    const createDocuments = new UploadImagesService();
+
+    const data = request.files as Express.Multer.File[];
+
+    const documents = await createDocuments.execute(data);
+
+    return response.json(documents);
   }
 }
 
