@@ -1,4 +1,5 @@
 import { Request, Response } from 'express';
+
 import { UploadImagesService } from '../services/UploadImagesService';
 
 class UploadImagesController {
@@ -7,7 +8,11 @@ class UploadImagesController {
 
     const data = request.files as Express.Multer.File[];
 
-    const documents = await createDocuments.execute(data);
+    const { status } = request.session;
+
+    const documents = await createDocuments.execute(data, status);
+
+    request.session.destroy();
 
     return response.json(documents);
   }

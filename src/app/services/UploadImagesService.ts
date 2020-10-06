@@ -1,8 +1,16 @@
 import { getRepository } from 'typeorm';
+import AppError from '../../errors/AppError';
 import { Document } from '../models/Document';
 
 class UploadImagesService {
-  public async execute(data: Express.Multer.File[]): Promise<Document> {
+  public async execute(
+    data: Express.Multer.File[],
+    status: string,
+  ): Promise<Document> {
+    if (status !== 'upload') {
+      throw new AppError('you have to create the loan first!');
+    }
+
     const documentsRepository = getRepository(Document);
 
     const cnhCpfImg = data.find(file => file.fieldname === 'cnh_cpf_img');

@@ -4,6 +4,8 @@ import 'dotenv/config';
 import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
+import cookieParser from 'cookie-parser';
+import session from 'express-session';
 
 import swaggerUi from 'swagger-ui-express';
 
@@ -20,9 +22,17 @@ import upload from './config/upload';
 createConnection();
 const app = express();
 
-app.use(morgan('dev'));
 app.use(cors());
 app.use(express.json());
+app.use(morgan('dev'));
+app.use(cookieParser());
+app.use(
+  session({
+    secret: '546512341fss3wa28f4',
+    resave: false,
+    saveUninitialized: true,
+  }),
+);
 
 app.use(routes);
 
