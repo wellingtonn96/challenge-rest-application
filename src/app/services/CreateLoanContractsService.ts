@@ -2,7 +2,7 @@ import { validate } from 'class-validator';
 import { getRepository } from 'typeorm';
 import AppError from '../../errors/AppError';
 
-import LoanContract from '../models/LoanContract';
+import Loan from '../models/Loan';
 
 interface IRequest {
   name: string;
@@ -16,8 +16,8 @@ interface IRequest {
 }
 
 class CreateLoanContractsService {
-  public async execute(data: IRequest): Promise<LoanContract> {
-    const loanContractsRepository = getRepository(LoanContract);
+  public async execute(data: IRequest): Promise<Loan> {
+    const loanContractsRepository = getRepository(Loan);
 
     const loanContracts = loanContractsRepository.create(data);
 

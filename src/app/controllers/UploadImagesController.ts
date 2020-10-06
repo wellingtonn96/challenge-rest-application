@@ -9,8 +9,9 @@ class UploadImagesController {
     const data = request.files as Express.Multer.File[];
 
     const { status } = request.session;
+    const { loan_id } = request.session;
 
-    const documents = await createDocuments.execute(data, status);
+    const documents = await createDocuments.execute(data, status, loan_id);
 
     request.session.destroy();
 

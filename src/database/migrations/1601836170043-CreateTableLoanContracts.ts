@@ -5,7 +5,7 @@ export class CreateTableLoanContracts1601836170043
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
-        name: 'loanContracts',
+        name: 'loans',
         columns: [
           {
             name: 'id',
@@ -66,6 +66,6 @@ export class CreateTableLoanContracts1601836170043
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropTable('loanContracts');
+    await queryRunner.dropTable('loans');
   }
 }

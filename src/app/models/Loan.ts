@@ -6,8 +6,8 @@ import {
   CreateDateColumn,
 } from 'typeorm';
 
-@Entity('loanContracts')
-class LoanContract {
+@Entity('loans')
+class Loan {
   @PrimaryGeneratedColumn('increment')
   id: number;
 
@@ -54,4 +54,4 @@ class LoanContract {
   updated_at?: Date;
 }
 
-export default LoanContract;
+export default Loan;
