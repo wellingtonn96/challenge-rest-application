@@ -16,7 +16,7 @@ class LoanContractsController {
 
     const createLoanControcts = new CreateLoanContractsService();
 
-    const loans = await createLoanControcts.execute({
+    const loan = await createLoanControcts.execute({
       name,
       email,
       cpf,
@@ -27,7 +27,11 @@ class LoanContractsController {
       address,
     });
 
-    return response.json(loans);
+    request.loan = {
+      id: loan.id,
+    };
+
+    return response.json(loan);
   }
 }
 

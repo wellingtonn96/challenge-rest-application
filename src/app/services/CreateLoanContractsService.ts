@@ -1,6 +1,6 @@
 import { validate } from 'class-validator';
 import { getRepository } from 'typeorm';
-import AppError from '../errors/AppError';
+import AppError from '../../errors/AppError';
 
 import LoanContract from '../models/LoanContract';
 

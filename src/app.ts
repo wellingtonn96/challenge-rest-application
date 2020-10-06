@@ -9,12 +9,13 @@ import swaggerUi from 'swagger-ui-express';
 
 import 'express-async-errors';
 
-import routes from './routes';
+import routes from './app/routes';
 import AppError from './errors/AppError';
 
 import createConnection from './database';
 
 import { documentation } from './utils/swagger';
+import upload from './config/upload';
 
 createConnection();
 const app = express();
@@ -26,6 +27,8 @@ app.use(express.json());
 app.use(routes);
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(documentation));
+
+app.use('/files', express.static(upload.directory));
 
 app.use((err: Error, request: Request, response: Response, _: NextFunction) => {
   if (err instanceof AppError) {
