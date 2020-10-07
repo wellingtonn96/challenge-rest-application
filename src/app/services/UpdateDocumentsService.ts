@@ -9,6 +9,7 @@ import uploadConfig from '../../config/upload';
 interface IRequest {
   data: Express.Multer.File[];
   loan_id: number;
+  state: string;
 }
 
 class UpdateDocumentsService {
@@ -36,11 +37,11 @@ class UpdateDocumentsService {
     });
 
     if (!loan) {
-      throw new AppError('Internal Error');
+      throw new AppError('Loan not exists!');
     }
 
     if (!documents) {
-      throw new AppError('Internal Error');
+      throw new AppError('Documents not exists!');
     }
 
     if (!loan.status.includes('UNDEFINED')) {
