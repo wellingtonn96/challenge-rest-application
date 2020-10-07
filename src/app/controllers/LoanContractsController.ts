@@ -28,7 +28,7 @@ class LoanContractsController {
     });
 
     request.session.loan_id = loan.id;
-    request.session.status = 'upload';
+    request.session.state = 'UPLOAD';
 
     return response.json(loan);
   }

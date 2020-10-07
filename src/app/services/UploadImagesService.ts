@@ -7,11 +7,11 @@ import Loan from '../models/Loan';
 class UploadImagesService {
   public async execute(
     data: Express.Multer.File[],
-    status: string,
+    state: string,
     loan_id: number,
   ): Promise<Document> {
-    if (status !== 'upload') {
-      throw new AppError('you have to create the loan first!');
+    if (state !== 'UPLOAD') {
+      throw new AppError('You already have to create the loan first!');
     }
 
     const loanRepository = getRepository(Loan);

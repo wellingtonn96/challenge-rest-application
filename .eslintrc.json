@@ -21,6 +21,7 @@
   },
   "plugins": ["@typescript-eslint", "prettier"],
   "rules": {
+    "no-unreachable": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "max-classes-per-file": "off",
     "@typescript-eslint/interface-name-prefix": "off",

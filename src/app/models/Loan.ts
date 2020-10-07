@@ -47,6 +47,9 @@ class Loan {
   @Column()
   address?: string;
 
+  @Column()
+  status: 'APPROVED' | 'DISAPPROVED';
+
   @CreateDateColumn()
   created_at?: Date;
 
