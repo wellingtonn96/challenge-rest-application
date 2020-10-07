@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-
+import { UpdateDocumentsService } from '../services/UpdateDocumentsService';
 import { UploadImagesService } from '../services/UploadImagesService';
 
 class UploadImagesController {
@@ -10,9 +10,21 @@ class UploadImagesController {
 
     const { state, loan_id } = request.session;
 
-    const documents = await createDocuments.execute(data, state, loan_id);
+    const documents = await createDocuments.execute({ data, state, loan_id });
 
     request.session.state = 'APPROVAL';
+
+    return response.json(documents);
+  }
+
+  public async update(request: Request, response: Response): Promise<any> {
+    const updateDocuments = new UpdateDocumentsService();
+
+    const data = request.files as Express.Multer.File[];
+
+    const { loan_id } = request.session;
+
+    const documents = await updateDocuments.execute({ data, loan_id });
 
     return response.json(documents);
   }

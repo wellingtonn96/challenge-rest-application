@@ -13,9 +13,15 @@ const loanContractsController = new LoanContractsController();
 const uploadImagesController = new UploadImagesController();
 const updateStatusController = new UpdataStatusController();
 
+usersRouter.get('/', loanContractsController.index);
+
 usersRouter.post('/', loanContractsController.create);
 
+usersRouter.put('/', loanContractsController.update);
+
 usersRouter.post('/upload', upload.any(), uploadImagesController.create);
+
+usersRouter.put('/upload', upload.any(), uploadImagesController.update);
 
 usersRouter.patch('/status', updateStatusController.create);
 

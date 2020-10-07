@@ -4,12 +4,15 @@ import AppError from '../../errors/AppError';
 import { Document } from '../models/Document';
 import Loan from '../models/Loan';
 
+interface IRequest {
+  data: Express.Multer.File[];
+  state: string;
+  loan_id: number;
+}
+
 class UploadImagesService {
-  public async execute(
-    data: Express.Multer.File[],
-    state: string,
-    loan_id: number,
-  ): Promise<Document> {
+  public async execute(dataRequest: IRequest): Promise<Document> {
+    const { data, state, loan_id } = dataRequest;
     if (state !== 'UPLOAD') {
       throw new AppError('You already have to create the loan first!');
     }
