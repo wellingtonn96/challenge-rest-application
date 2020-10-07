@@ -1,0 +1,324 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2020-10-07T21:26:30.569Z",
+  "__export_source": "insomnia.desktop.app:v2020.4.1",
+  "resources": [{
+    "_id": "req_6e3ec6ac483a44258de4550add83d607",
+    "parentId": "fld_c5ef2b54d56c4398996686e8812e5076",
+    "modified": 1602090787876,
+    "created": 1602090778241,
+    "url": "{{ base_url }}/loans",
+    "name": "listing all loans",
+    "description": "",
+    "method": "GET",
+    "body": {},
+    "parameters": [],
+    "headers": [],
+    "authentication": {},
+    "metaSortKey": -1602090633912,
+    "isPrivate": false,
+    "settingStoreCookies": true,
+    "settingSendCookies": true,
+    "settingDisableRenderRequestBody": false,
+    "settingEncodeUrl": true,
+    "settingRebuildPath": true,
+    "settingFollowRedirects": "global",
+    "_type": "request"
+  }, {
+    "_id": "fld_c5ef2b54d56c4398996686e8812e5076",
+    "parentId": "wrk_fb232ec53a9c4d9dbb4d617521dc1c9f",
+    "modified": 1602090733243,
+    "created": 1602090733243,
+    "name": "LOANS",
+    "description": "",
+    "environment": {},
+    "environmentPropertyOrder": null,
+    "metaSortKey": -1602090733243,
+    "_type": "request_group"
+  }, {
+    "_id": "wrk_fb232ec53a9c4d9dbb4d617521dc1c9f",
+    "parentId": null,
+    "modified": 1601834044656,
+    "created": 1601834044657,
+    "name": "challenge-rest-application",
+    "description": "",
+    "scope": null,
+    "_type": "workspace"
+  }, {
+    "_id": "req_cc14ab82210b4f82b2587e76fc949e82",
+    "parentId": "fld_c5ef2b54d56c4398996686e8812e5076",
+    "modified": 1602097865086,
+    "created": 1602094674554,
+    "url": "{{ base_url }}/loans/upload",
+    "name": "update images service",
+    "description": "",
+    "method": "PUT",
+    "body": {
+      "mimeType": "multipart/form-data",
+      "params": [{
+        "name": "cnh_cpf_img",
+        "value": "",
+        "description": "",
+        "id": "pair_dc5269934c864c53bf9d54847a832502",
+        "type": "file",
+        "fileName": "/home/wellington/Pictures/919f545c05cc3e610db658015542fd43.jpg"
+      }, {
+        "name": "income_proof_img",
+        "value": "",
+        "description": "",
+        "id": "pair_f6ff70079ad94f82993dac039138f415",
+        "type": "file",
+        "fileName": "/home/wellington/Pictures/photo-1546900703-cf06143d1239.jpeg"
+      }, {
+        "name": "income_proof_img",
+        "value": "",
+        "description": "",
+        "id": "pair_d684b074b2a54e8fa2e8fdcf7fb6decc",
+        "type": "file",
+        "fileName": "/home/wellington/Pictures/sfsfagd.jpeg",
+        "disabled": true
+      }]
+    },
+    "parameters": [],
+    "headers": [{
+      "name": "Content-Type",
+      "value": "multipart/form-data",
+      "id": "pair_1151d628dc4d4edc8ecc95fe8bb1e585"
+    }],
+    "authentication": {},
+    "metaSortKey": -1602090633887,
+    "isPrivate": false,
+    "settingStoreCookies": true,
+    "settingSendCookies": true,
+    "settingDisableRenderRequestBody": false,
+    "settingEncodeUrl": true,
+    "settingRebuildPath": true,
+    "settingFollowRedirects": "global",
+    "_type": "request"
+  }, {
+    "_id": "req_b42fd4b8af9f4baba58f3208ca97107b",
+    "parentId": "fld_c5ef2b54d56c4398996686e8812e5076",
+    "modified": 1602090741056,
+    "created": 1602090540660,
+    "url": "{{ base_url }}/loans/status",
+    "name": "update status aprovall",
+    "description": "",
+    "method": "PATCH",
+    "body": {
+      "mimeType": "application/json",
+      "text": "{\n\t\"status\": \"APPROVED\"\n}"
+    },
+    "parameters": [],
+    "headers": [{
+      "name": "Content-Type",
+      "value": "application/json",
+      "id": "pair_ba1245b53367404ea81c2109c7d6e2c2"
+    }],
+    "authentication": {},
+    "metaSortKey": -1602090633862,
+    "isPrivate": false,
+    "settingStoreCookies": true,
+    "settingSendCookies": true,
+    "settingDisableRenderRequestBody": false,
+    "settingEncodeUrl": true,
+    "settingRebuildPath": true,
+    "settingFollowRedirects": "global",
+    "_type": "request"
+  }, {
+    "_id": "req_9c7f9376955a407d8e1b5c132b80d90e",
+    "parentId": "fld_c5ef2b54d56c4398996686e8812e5076",
+    "modified": 1602091185503,
+    "created": 1602091168864,
+    "url": "",
+    "name": "update images",
+    "description": "",
+    "method": "PUT",
+    "body": {},
+    "parameters": [],
+    "headers": [],
+    "authentication": {},
+    "metaSortKey": -1602090633837,
+    "isPrivate": false,
+    "settingStoreCookies": true,
+    "settingSendCookies": true,
+    "settingDisableRenderRequestBody": false,
+    "settingEncodeUrl": true,
+    "settingRebuildPath": true,
+    "settingFollowRedirects": "global",
+    "_type": "request"
+  }, {
+    "_id": "req_3cd720bdcae041e39093c4c97e15b08b",
+    "parentId": "fld_c5ef2b54d56c4398996686e8812e5076",
+    "modified": 1602094210667,
+    "created": 1602090633812,
+    "url": "{{ base_url }}/loans",
+    "name": "update loans",
+    "description": "",
+    "method": "PUT",
+    "body": {
+      "mimeType": "application/json",
+      "text": "{\n\t\"name\": \"seleste\",\n\t\"email\": \"seleste@gmail.com\",\n\t\"cpf\": \"424.245.588-14\",\n\t\"loan_amount\": 150.2,\n\t\"monthly_income\": 152.1,\n\t\"date_birth\": \"1998-5-25\",\n\t\"marital_status\": \"cadada\",\n\t\"address\": \"rua são jorje\"\n}"
+    },
+    "parameters": [],
+    "headers": [{
+      "name": "Content-Type",
+      "value": "application/json",
+      "id": "pair_cf741f351cfd4ac0ab4f32075956bebe"
+    }],
+    "authentication": {},
+    "metaSortKey": -1602090633812,
+    "isPrivate": false,
+    "settingStoreCookies": true,
+    "settingSendCookies": true,
+    "settingDisableRenderRequestBody": false,
+    "settingEncodeUrl": true,
+    "settingRebuildPath": true,
+    "settingFollowRedirects": "global",
+    "_type": "request"
+  }, {
+    "_id": "req_40f138391ce941e4a7785e9fb708dc00",
+    "parentId": "fld_c5ef2b54d56c4398996686e8812e5076",
+    "modified": 1602090743086,
+    "created": 1601852400896,
+    "url": "{{ base_url }}/loans/upload",
+    "name": "upload images loan",
+    "description": "",
+    "method": "POST",
+    "body": {
+      "mimeType": "multipart/form-data",
+      "params": [{
+        "name": "cnh_cpf_img",
+        "value": "",
+        "description": "",
+        "id": "pair_612272f335ea41adbc4397da08781a86",
+        "type": "file",
+        "fileName": "/home/wellington/Pictures/IMAGENS/ImageA_048.jpg"
+      }, {
+        "name": "income_proof_img",
+        "value": "",
+        "description": "",
+        "id": "pair_31577020f4d4462ba6d0ba140ece025b",
+        "type": "file",
+        "fileName": "/home/wellington/Pictures/wp2062777.jpg"
+      }, {
+        "name": "property_img",
+        "value": "",
+        "description": "",
+        "id": "pair_f3e47daeb4f6467a82818ae7c7950db6",
+        "type": "file",
+        "fileName": "/home/wellington/Pictures/jhghg.jpeg"
+      }]
+    },
+    "parameters": [],
+    "headers": [{
+      "name": "Content-Type",
+      "value": "multipart/form-data",
+      "id": "pair_91cf61bd28244691857c8672875dbae6"
+    }],
+    "authentication": {},
+    "metaSortKey": -1602090633787,
+    "isPrivate": false,
+    "settingStoreCookies": true,
+    "settingSendCookies": true,
+    "settingDisableRenderRequestBody": false,
+    "settingEncodeUrl": true,
+    "settingRebuildPath": true,
+    "settingFollowRedirects": "global",
+    "_type": "request"
+  }, {
+    "_id": "req_7d7628de43c7400498871c7e44e6beae",
+    "parentId": "fld_c5ef2b54d56c4398996686e8812e5076",
+    "modified": 1602090741908,
+    "created": 1601908135288,
+    "url": "{{ base_url }}/files/7beb463507f4cc056751-jhghg.jpeg",
+    "name": "images url",
+    "description": "",
+    "method": "GET",
+    "body": {},
+    "parameters": [],
+    "headers": [],
+    "authentication": {},
+    "metaSortKey": -1602090633762,
+    "isPrivate": false,
+    "settingStoreCookies": true,
+    "settingSendCookies": true,
+    "settingDisableRenderRequestBody": false,
+    "settingEncodeUrl": true,
+    "settingRebuildPath": true,
+    "settingFollowRedirects": "global",
+    "_type": "request"
+  }, {
+    "_id": "req_83d24769ce7f41889563fbc002dd45b2",
+    "parentId": "fld_c5ef2b54d56c4398996686e8812e5076",
+    "modified": 1602090743970,
+    "created": 1601834176819,
+    "url": "{{ base_url }}/loans",
+    "name": "create loans",
+    "description": "",
+    "method": "POST",
+    "body": {
+      "mimeType": "application/json",
+      "text": "{\n\t\"name\": \"wellington\",\n\t\"email\": \"wellington96ssouza@gmail.com\",\n\t\"cpf\": \"424.245.588-14\",\n\t\"loan_amount\": 150.2,\n\t\"monthly_income\": 152.1,\n\t\"date_birth\": \"1996-5-25\",\n\t\"marital_status\": \"solteiro\",\n\t\"address\": \"rua são jorje\"\n}"
+    },
+    "parameters": [],
+    "headers": [{
+      "name": "Content-Type",
+      "value": "application/json",
+      "id": "pair_f75ebb5dd1d4417cae34a3aabbc2c279"
+    }],
+    "authentication": {},
+    "metaSortKey": -1602090633712,
+    "isPrivate": false,
+    "settingStoreCookies": true,
+    "settingSendCookies": true,
+    "settingDisableRenderRequestBody": false,
+    "settingEncodeUrl": true,
+    "settingRebuildPath": true,
+    "settingFollowRedirects": "global",
+    "_type": "request"
+  }, {
+    "_id": "env_4ce8bf288f3e0c7bf061006b1ed8cd63dcf19dc8",
+    "parentId": "wrk_fb232ec53a9c4d9dbb4d617521dc1c9f",
+    "modified": 1601834103089,
+    "created": 1601834045086,
+    "name": "Base Environment",
+    "data": {
+      "base_url": "http://localhost:3333"
+    },
+    "dataPropertyOrder": {
+      "&": ["base_url"]
+    },
+    "color": null,
+    "isPrivate": false,
+    "metaSortKey": 1601834045086,
+    "_type": "environment"
+  }, {
+    "_id": "jar_4ce8bf288f3e0c7bf061006b1ed8cd63dcf19dc8",
+    "parentId": "wrk_fb232ec53a9c4d9dbb4d617521dc1c9f",
+    "modified": 1602098231470,
+    "created": 1601834045088,
+    "name": "Default Jar",
+    "cookies": [{
+      "key": "connect.sid",
+      "value": "s%3AYgHJSXol2nBKoOojP_05Hd49elDFzUjK.U2Of3FmfE%2FyEEVEfnvs2KHu2YfqAP53Z8eT8S9r7eHw",
+      "domain": "localhost",
+      "path": "/",
+      "httpOnly": true,
+      "hostOnly": true,
+      "creation": "2020-10-06T13:09:22.670Z",
+      "lastAccessed": "2020-10-07T19:17:11.469Z",
+      "id": "7159955009148973"
+    }],
+    "_type": "cookie_jar"
+  }, {
+    "_id": "spc_91841b7815274af4bdf47bc173191967",
+    "parentId": "wrk_fb232ec53a9c4d9dbb4d617521dc1c9f",
+    "modified": 1601834044660,
+    "created": 1601834044660,
+    "fileName": "challenge-rest-application",
+    "contents": "",
+    "contentType": "yaml",
+    "_type": "api_spec"
+  }]
+}

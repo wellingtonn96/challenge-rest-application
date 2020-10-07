@@ -25,6 +25,8 @@ This app using all the latest features, tools and practices in web development!
 
 **URL** : `http://localhost:3333/api-docs/`
 
+- Import on **Insomnia** the file `insomnia.json`,
+
 ### Testing the application
 
 1. Test the application with the command `yarn test`
