@@ -22,9 +22,9 @@ class UploadImagesController {
 
     const data = request.files as Express.Multer.File[];
 
-    const { loan_id } = request.session;
+    const { loan_id, state } = request.session;
 
-    const documents = await updateDocuments.execute({ data, loan_id });
+    const documents = await updateDocuments.execute({ data, loan_id, state });
 
     return response.json(documents);
   }
